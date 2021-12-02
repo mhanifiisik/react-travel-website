@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Oswald", sans-serif;
+}
+p {
+  font-size: 24px;
+}
+
+h1,
+h2 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+button {
+  padding: 20px;
+  border: none;
+  /* border: solid 1px black; */
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  color: black;
+  background-color: white;
+  transition: background-color 0.1s ease-in-out;
+}
+button:hover {
+  background-color: lightcoral;
+  color: black;
+}
+
+.home-page {
+  background: url("/src/Assets/image3.jpg") no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.home-ctn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.home-header {
+  font-size: 72px;
+}
+.home-btn {
+  border: solid 1px black;
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.header {
+  position: absolute;
+  top: 5%;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  padding-right: 50px;
+  gap: 50px;
+}
+
+.mobile-menu {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: #4bb4e7;
+}
+.mobile-menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 32px;
+  color: black;
+}
+.header nav {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.header nav a {
+  font-size: 22px;
+  cursor: pointer;
+}
+.header nav a:hover {
+  border-bottom: 2px solid white;
+}
+.bot-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.bot-nav a {
+  cursor: pointer;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: transparent;
+  border-right: solid 1px black;
+  width: 80px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.left-text {
+  flex-direction: row;
+  background-color: #4bb4e7;
+}
+.right-text {
+  flex-direction: row-reverse;
+  background-color: #efe9dd;
+}
+.text-left {
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+}
+.text-right {
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: black;
+}
+.country-images {
+  width: 50%;
+  height: 100vh;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+@media only screen and (max-width: 850px) {
+  p {
+    font-size: 22px;
+  }
+  h1,
+  h2 {
+    font-size: 26px;
+    flex-wrap: wrap;
+  }
+  .header {
+    gap: 5px;
+    padding: 0px 25px;
+  }
+  .header nav {
+    gap: 5px;
+  }
+  .header nav a {
+    font-size: 14px;
+  }
+
+  .home-header {
+    font-size: 32px;
+  }
+  .bot-nav {
+    gap: 20px;
+  }
+  .left-text {
+    flex-direction: column-reverse;
+    gap: 5px;
+    flex: 1;
+  }
+  .right-text {
+    flex-direction: column-reverse;
+    gap: 5px;
+    flex: 1;
+  }
+  .country-images {
+    width: 100%;
+  }
+  button {
+    padding: 5px;
+    font-size: 12px;
+  }
+  .text-right button {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .text-left button {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .header {
+    display: none;
+  }
+}
+@media only screen and (max-width: 450px) {
+  p {
+    font-size: 14px;
+  }
+  h1,
+  h2 {
+    font-size: 18px;
+    flex-wrap: wrap;
+  }
+  .text-right {
+    padding: 0px 10px;
+  }
+  .text-left {
+    padding: 0px 10px;
+  }
+  .text-right button {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .text-left button {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .navbar {
+    border: none;
+  }
+}
